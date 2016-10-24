@@ -1,0 +1,87 @@
+#COMPUTER SETUP
+
+#install homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+#installing mac os tools
+xcode-select --install
+
+brew install wget
+brew install brew-cask
+#brew search to find a specific package or program
+
+#environment
+brew install bash
+brew install Caskroom/cask/iterm2
+
+#text editor
+#emacs:cocoa is the the emacs graphic interface for mac
+brew install --with-cocoa --srgb emacs
+#ln -s /usr/local/Cellar/emacs/<VERSION>/Emacs.app /Applications
+brew cask install atom
+
+#git
+Caskroom/cask/github-desktop
+
+
+#python
+brew install readline
+brew install python
+#pip is part of the package in python
+brew install pyenv-virtualenv
+brew install python3 #not working
+brew install pyenv-virtualenvwrapper
+
+pip install pandas
+pip install numpy
+pip install plotly
+pip install matplotlib
+
+
+#gerenciador de janelas
+brew cask install slate
+
+
+#R
+brew tap homebrew/science
+brew install Caskroom/cask/xquartz
+brew install r
+brew install Caskroom/cask/rstudio
+
+#scala
+brew install scala
+brew install sbt
+brew cask install intellij-idea-ce
+
+#sql
+brew install mysql
+brew cask install mysqlworkbench
+pip install MySQL-python #not working - instalar c primeiro
+pip install PyMySQL
+brew install mysql-connector-c # asking for "brew unlink mysql" before continuing
+
+
+brew install postgresql
+gem install lunchy
+
+brew install docker
+
+#java script
+npm install chart.js --save
+
+#heroku
+brew install heroku-toolbelt
+heroku update
+heroku login
+#SHA256:92yEVud/h0bdXl860kCxqHe+cboVHQcNRQa25mp/7uo liviaclarete@Livias-Air-2.home
+brew install node
+npm install -g grunt-cli
+
+
+#other apps
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install slack
+brew cask install skype
+
+pip install Flask
