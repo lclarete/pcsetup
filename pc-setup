@@ -1,4 +1,6 @@
-#COMPUTER SETUP
+#!/bin/sh
+
+#MAC OS SETUP
 
 #install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -20,9 +22,12 @@ brew install --with-cocoa --srgb emacs
 #ln -s /usr/local/Cellar/emacs/<VERSION>/Emacs.app /Applications
 brew cask install atom
 
-#git
-Caskroom/cask/github-desktop
+#basic formulae
+brew install bash-completion
+brew install igt
 
+Caskroom/cask/github-desktop
+brew cask install slate
 
 #python
 brew install readline
@@ -34,13 +39,18 @@ brew install pyenv-virtualenvwrapper
 
 pip install pandas
 pip install numpy
+pip install SciPy
 pip install plotly
 pip install matplotlib
-
-
-#gerenciador de janelas
-brew cask install slate
-
+pip install processing
+pip install psycopg2
+pip install pyparsing
+pip install PySAL
+pip install RPy2
+pip install MySQL-python #not working - instalar c primeiro
+pip install PyMySQL
+brew install mysql-connector-c # asking for "brew unlink mysql" before continuing
+pip install Flask
 
 #R
 brew tap homebrew/science
@@ -56,10 +66,6 @@ brew cask install intellij-idea-ce
 #sql
 brew install mysql
 brew cask install mysqlworkbench
-pip install MySQL-python #not working - instalar c primeiro
-pip install PyMySQL
-brew install mysql-connector-c # asking for "brew unlink mysql" before continuing
-
 
 brew install postgresql
 gem install lunchy
@@ -71,17 +77,44 @@ npm install chart.js --save
 
 #heroku
 brew install heroku-toolbelt
-heroku update
-heroku login
-#SHA256:92yEVud/h0bdXl860kCxqHe+cboVHQcNRQa25mp/7uo liviaclarete@Livias-Air-2.home
 brew install node
 npm install -g grunt-cli
 
+brew install perl --update
+\curl -L https://install.perlbrew.pl | bash
+perl -MCPAN -e shell #perl module repositories
+#dependencies required for KH Coder (text processing software)
+cpan Jcode.pm
+cpan Tk.pm
+cpan DBD/CSV.pm
+cpan Spreadsheet/WriteExcel.pm
+cpan Unicode::String.pm
+cpan DBD/mysql.pm
+cpan Net/Telnet.pm
+cpan YAML.pm
+cpan Spreadsheet/ParseExcel/FmtJapan.pm
+cpan Spreadsheet/ParseXLSX.pm
+cpan Clipboard.pm
+cpan Statistics/Lite.pm
+cpan Algorithm/NaiveBayes.pm
+cpan Text/Iconv.pm
+cpan foo.pm
+
+#gis
+# Geospatial Data Abstraction Library(GDAL)
+brew install gdal --enable-unsupported --with-libkml --with-mysql
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 #other apps
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install slack
 brew cask install skype
+brew cask install --appdir="/Applications" spotify
 
-pip install Flask
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vagrant-manager
+
+#google protobuf
+brew install --devel protobuf
