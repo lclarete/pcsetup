@@ -47,10 +47,18 @@ pip install psycopg2
 pip install pyparsing
 pip install PySAL
 pip install RPy2
+pip install lxml
+pip install requests
+pip install bs4
+pip install unidecode
+pip install pyexcel
+
+pip install pillow
 pip install MySQL-python #not working - instalar c primeiro
 pip install PyMySQL
 brew install mysql-connector-c # asking for "brew unlink mysql" before continuing
 pip install Flask
+brew install pyside
 
 #R
 brew tap homebrew/science
@@ -105,6 +113,30 @@ cpan foo.pm
 brew install gdal --enable-unsupported --with-libkml --with-mysql
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
+#dependencies
+brew install cmake
+brew install Flex
+brew install gsl
+brew install qwt
+brew install spatialindex
+brew install expat
+brew install QScintilla2
+brew install bison
+brew install netcdf
+brew install postgis
+brew install cartr/qt4/qt #not included in pyqt-qt4
+brew install pyqt
+brew tap osgeo/osgeo4mac
+
+brew install osgeo/osgeo4mac/pyqt-qt4
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+brew install qgis-214
+
+brew install osgeo/osgeo4mac/gdal-grass64
+brew install qgis --with-grass --with-postgis
+
+
 #other apps
 brew cask install google-chrome
 brew cask install google-drive
@@ -118,3 +150,6 @@ brew cask install vagrant-manager
 
 #google protobuf
 brew install --devel protobuf
+
+#Process dashboard
+brew install htop
